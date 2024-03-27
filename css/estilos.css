@@ -128,5 +128,5 @@ font-size: clamp(3rem, 10vw , 7rem);
 }
 
 .destaque p {
-
+font-size: clamp(1rem, 3vw, 5rem);
 }
