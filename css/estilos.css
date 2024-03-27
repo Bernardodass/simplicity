@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-*{box-sizing: border-box;}
 
-:root {
---cor-titulo: #4d4d4d;
---cor-texto: #333;
---cor-escura: #000;
---cor-clara: #fff;
---cor-intermediaria: #ececec;
+* {
+    box-sizing: border-box;
 }
 
-html { font-size: 16px; }
+:root {
+    --cor-titulo: #4d4d4d;
+    --cor-texto: #333;
+    --cor-escura: #000;
+    --cor-clara: #fff;
+    --cor-intermediaria: #ececec;
+}
+
+html {
+    font-size: 16px;
+}
 
 body {
     color: var(--cor-texto);
@@ -17,15 +22,24 @@ body {
     background-color: var(--cor-clara);
 }
 
-body, h1, h2, p, figure, nav ul {
+body,
+h1,
+h2,
+p,
+figure,
+nav ul {
     margin: 0;
     padding: 0;
 }
 
 /* Imagem flexível */
-img { max-width: 100%;}
+img {
+    max-width: 100%;
+}
 
-a { text-decoration: none; }
+a {
+    text-decoration: none;
+}
 
 h1 {
     font-family: Raleway, sans-serif;
@@ -56,7 +70,10 @@ nav h2 a {
     display: inline-block;
 }
 
-nav h2 a:hover, nav h2 a:focus, .links-menu a:hover, .links-menu a:focus {
+nav h2 a:hover,
+nav h2 a:focus,
+.links-menu a:hover,
+.links-menu a:focus {
     background-color: var(--cor-intermediaria);
 }
 
@@ -116,7 +133,8 @@ nav h2 a:hover, nav h2 a:focus, .links-menu a:hover, .links-menu a:focus {
     align-items: center;
 }
 
-.destaque h2, .destaque p {
+.destaque h2,
+.destaque p {
     text-align: center;
     color: var(--cor-clara);
 }
@@ -124,9 +142,33 @@ nav h2 a:hover, nav h2 a:focus, .links-menu a:hover, .links-menu a:focus {
 
 /* Usando responsividade sem utilizar @media Querie - 'clamp(tamanho minimo, tamanho ideal, tamanho máximo). */
 .destaque h2 {
-font-size: clamp(3rem, 10vw , 7rem);
+    font-size: clamp(3rem, 10vw, 7rem);
 }
 
 .destaque p {
-font-size: clamp(1rem, 3vw, 5rem);
+    font-size: clamp(1rem, 3vw, 5rem);
+}
+
+/* Etapa 1) Regra de animação */
+@keyframes animaDestaque {
+
+    /* Dê (estado inicial, como começa) */
+    from {
+        opacity: 0;
+        transform: translateY(-700px);
+
+    }
+
+    /* Para (estado final, como termina) */
+    to {
+        opacity: 1;
+    }
+}
+
+/* Etapa 2) Aplicando animação no texto destaque */
+
+.destaque h2,
+.destaque p {
+    animation-name: animaDestaque;
+    animation-duration: 1.5s;
 }
