@@ -166,9 +166,28 @@ nav h2 a:focus,
 }
 
 /* Etapa 2) Aplicando animação no texto destaque */
-
 .destaque h2,
 .destaque p {
     animation-name: animaDestaque;
     animation-duration: 1.5s;
+}
+
+article h2 {
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-family: Raleway, sans-serif;  
+    color: var(--cor-titulo);
+}
+
+.front-end, .historia, .localizacao {
+    text-align: center;
+}
+
+article p {
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+address {
+    font-style: normal;
 }
