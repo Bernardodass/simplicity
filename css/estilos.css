@@ -191,3 +191,65 @@ article p {
 address {
     font-style: normal;
 }
+
+/* Crie uma regra para formatar o artigo de História da Internet com:
+	
+Plano de fundo: imagem "fundo-madeira"
+Deixe a imagem parada e cobrindo todo o espaço do artigo
+Crie uma regra para formatar o titulo "História da Internet" com cor clara e uma sombra no texto.
+Crie uma regra para formatar o vídeo do artigo História da Internet com:
+	
+Largura de 100%
+Largura máxima de 700px
+Margem inferior de 2rem
+Crie uma regra para formatar o mapa da Localização com:
+	
+Largura de 100%
+Margem superior de 2rem
+Crie uma classe chamada "limitador" com largura de 95vw e margem automática. Aplique esta classe no cabeçalho e no artigo front-end.
+Crie uma regra para o rodapé com:
+	
+Fundo escuro
+Cor do texto clara
+Altura de 30vh
+Negrito
+Flex com centralização total
+Texto centralizado */
+
+article .historia {
+    background-image: url(/imagens/fundo-madeira.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hist {
+    color: var(--cor-clara);
+    text-shadow: 2px 2px 2px black;
+}
+
+.vid {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 2rem;
+}
+
+.maps {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.limitador {
+    margin: auto;
+    width: 95vw;
+}
+
+footer {
+    background-color: var(--cor-escura);
+    color: var(--cor-clara);
+    height: 30vh;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
