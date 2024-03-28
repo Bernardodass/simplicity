@@ -216,8 +216,8 @@ Negrito
 Flex com centralização total
 Texto centralizado */
 
-article .historia {
-    background-image: url(/imagens/fundo-madeira.jpg);
+.historia {
+    background-image: url(../imagens/fundo-madeira.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -241,6 +241,7 @@ article .historia {
 .limitador {
     margin: auto;
     width: 95vw;
+    /* background-color: yellow; */
 }
 
 footer {
