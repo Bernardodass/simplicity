@@ -354,7 +354,7 @@ td:last-child::before {
         max-width: 1000px;
     }
 
-    body {
+    html {
         font-size: 18px;
     }
 }
