@@ -329,7 +329,23 @@ td:last-child::before {
     content: "R$ ";
 }
 
+.imagem img {
+    border-radius: 100%;
+    transform: scale(0.8);
+    filter: brightness(150%) blur(2px);
+    transition: 0.5s;
+}
 
+.imagem {
+    padding: 20px;
+    text-align: center;
+}
+
+.imagem img:hover {
+    transform: scale(1);
+    filter: none;
+    border-radius: 10%;
+}
 
 @media screen and (min-width: 570px) {
     nav h2 {
@@ -365,4 +381,6 @@ td:last-child::before {
         font-size: 18px;
     }
 }
+
+
 
