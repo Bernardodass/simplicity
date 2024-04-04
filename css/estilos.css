@@ -302,5 +302,14 @@ table tr:nth-child(even) {
     table tr:nth-child(odd) {
         background-color:var(--cor-clara);}
 
+td:nth-child(2) {
+    text-align: center;
+}
 
+th:last-child, td:last-child {
+    text-align: right;
+}
 
+td:last-child::before {
+    content: "R$ ";
+}
