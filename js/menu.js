@@ -18,6 +18,5 @@ botaomenu.addEventListener("click", function(event){
     } else {
         botaomenu.innerHTML = "Menu &equiv;";
     }
-
 });
 
