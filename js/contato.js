@@ -35,6 +35,13 @@ botaobuscar.addEventListener("click", function(event){
     (JavaScript assíntono e XML)
     
     Técnica de comunicação (transmissão, recebimento) de dados que permite o processamento em conjunto com APIs (ou Web Services)*/
-    
+
+    // etapa 1: preparar a URL da API com o CEP que foi informado
+
+    // etapa 2: acessar a API (com a URL) e aguardar o retorno dela
+
+    // etapa3: extrair os dados da resposta da API em formato JSON
+
+    // etapa 4: lidar com os dados (em caso de erro e de sucesso)
 
 });
