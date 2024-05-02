@@ -11,7 +11,7 @@ const botaobuscar = formulario.querySelector("#buscar");
 const mensagemstatus = formulario.querySelector("#status");
 
 // detectando quando o botão de buscar CEP é acionado
-botaobuscar.addEventListener("click", function(event){
+botaobuscar.addEventListener("click", async function(event){
     // anular o comportamento padrão de rediricionamento/recarregamento da página. Sempre acontece ao trabalhar com <a> e <form>.
     event.preventDefault();
 
@@ -37,11 +37,37 @@ botaobuscar.addEventListener("click", function(event){
     Técnica de comunicação (transmissão, recebimento) de dados que permite o processamento em conjunto com APIs (ou Web Services)*/
 
     // etapa 1: preparar a URL da API com o CEP que foi informado
-
+    let url = `https://viacep.com.br/ws/${cepinformado}/json/`
+   
     // etapa 2: acessar a API (com a URL) e aguardar o retorno dela
+    const resposta = await fetch(url);
 
     // etapa3: extrair os dados da resposta da API em formato JSON
+    const dados = await resposta.json();
 
     // etapa 4: lidar com os dados (em caso de erro e de sucesso)
 
+    // se existir a string/prop "erro" no objeto dados
+    if("erro" in dados){
+        mensagemstatus.textContent = "CEP inexistente";
+        mensagemstatus.style.color = "red";
+    } else {
+        // senão, é porque o CEP existe!
+        mensagemstatus.textContent = "CEP encontrado!";
+        mensagemstatus.style.color = "blue";
+
+        // selecionando os elementos que estão escondidos
+        const camposrestantes = formulario.querySelectorAll('.campos-restantes');
+
+        // removendo a classes um loop
+        for( const campo of camposrestantes ){
+            campo.classList.remove("campos-restantes");
+        }
+
+        campoendereco.value = dados.logradouro;
+        campobairro.value = dados.bairro;
+        campocidade.value = dados.localidade;
+        campoestado.value = dados.uf;
+
+    }
 });
