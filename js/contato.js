@@ -7,7 +7,7 @@ const campoendereco = formulario.querySelector("#endereco");
 const campobairro = formulario.querySelector("#bairro");
 const campocidade = formulario.querySelector("#cidade");
 const campoestado = formulario.querySelector("#estado");
-const campotelefone = formulario.querySelector("telefone");
+const campotelefone = formulario.querySelector("#telefone");
 const botaobuscar = formulario.querySelector("#buscar");
 const mensagemstatus = formulario.querySelector("#status");
 
