@@ -422,8 +422,9 @@ button:hover, button:focus {
     color: blueviolet;
     font-size: 24px;
     font-style: italic;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
     text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .campos-restantes {display: none;}
