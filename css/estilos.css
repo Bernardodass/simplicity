@@ -418,6 +418,12 @@ button:hover, button:focus {
     padding: 12px;
 }
 
+#status-do-envio {
+    color: blueviolet;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
 .campos-restantes {display: none;}
 
 @media screen and (min-width: 570px) {

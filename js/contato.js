@@ -77,3 +77,35 @@ botaobuscar.addEventListener("click", async function(event){
 
     }
 });
+
+
+/* script do Formspree */
+
+async function handleSubmit(event) {
+  event.preventDefault();
+  var status = document.getElementById("status-do-envio");
+  var data = new FormData(event.target);
+  fetch(event.target.action, {
+    method: formulario.method,
+    body: data,
+    headers: {
+        'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      status.innerHTML = "DAORA!";
+      formulario.reset()
+    } else {
+      response.json().then(data => {
+        if (Object.hasOwn(data, 'errors')) {
+          status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+        } else {
+          status.innerHTML = "DEU ERRADO"
+        }
+      })
+    }
+  }).catch(error => {
+    status.innerHTML = "DEU ERRADO"
+  });
+}
+formulario.addEventListener("submit", handleSubmit)
