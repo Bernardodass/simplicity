@@ -7,8 +7,14 @@ const campoendereco = formulario.querySelector("#endereco");
 const campobairro = formulario.querySelector("#bairro");
 const campocidade = formulario.querySelector("#cidade");
 const campoestado = formulario.querySelector("#estado");
+const campotelefone = formulario.querySelector("telefone");
 const botaobuscar = formulario.querySelector("#buscar");
 const mensagemstatus = formulario.querySelector("#status");
+
+
+/* seleção dos campos (via jQuery) e ativação das máscaras (via jQuery Mask) */
+$(campocep).mask("00000-000");         // 01234-567
+$(campotelefone).mask("(00) 0000-0000");         // (11) 2135-0300
 
 // detectando quando o botão de buscar CEP é acionado
 botaobuscar.addEventListener("click", async function(event){
@@ -17,8 +23,8 @@ botaobuscar.addEventListener("click", async function(event){
 
     
 
-    // verificando se o CEP NÃO TEM 8 digitos
-    if ( campocep.value.length !==8 ){
+    // verificando se o CEP NÃO TEM 9 digitos
+    if ( campocep.value.length !==9 ){
         // informar o usuário sobre o erro
       mensagemstatus.textContent = "Digite um CEP válido";
       mensagemstatus.style.color = "plum";
