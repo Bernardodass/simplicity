@@ -400,7 +400,8 @@ button {
     cursor: pointer;
 }
 
-button:hover, button:focus {
+button:hover,
+button:focus {
     background-color: var(--cor-clara);
     color: var(--cor-escura);
     box-shadow: var(--cor-escura) 0 0 2px;
@@ -427,7 +428,9 @@ button:hover, button:focus {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.campos-restantes {display: none;}
+.campos-restantes {
+    display: none;
+}
 
 @media screen and (min-width: 570px) {
     nav h2 {
